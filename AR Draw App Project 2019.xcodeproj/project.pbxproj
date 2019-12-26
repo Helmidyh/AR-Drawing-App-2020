@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142B39AE7DC8DAE9EC1583D8 /* Pods_AR_Draw_App_Project_2019Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9454C4617D2E8DF10C8936E6 /* Pods_AR_Draw_App_Project_2019Tests.framework */; };
+		22103B876F1841868E8CFEFA /* Pods_AR_Draw_App_Project_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309334364FDB0642EEC51826 /* Pods_AR_Draw_App_Project_2019.framework */; };
+		6F0928782381732500CD6788 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0928772381732500CD6788 /* Color.swift */; };
+		6F343C37239F91740072AC29 /* SavingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F343C36239F91740072AC29 /* SavingHelper.swift */; };
+		6F65C9BD23684B18008F9A4F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65C9BC23684B18008F9A4F /* HomeController.swift */; };
 		6FAF35EE236830400042FE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF35ED236830400042FE65 /* AppDelegate.swift */; };
 		6FAF35F0236830400042FE65 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF35EF236830400042FE65 /* art.scnassets */; };
-		6FAF35F2236830400042FE65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF35F1236830400042FE65 /* ViewController.swift */; };
+		6FAF35F2236830400042FE65 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF35F1236830400042FE65 /* ARController.swift */; };
 		6FAF35F5236830400042FE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF35F3236830400042FE65 /* Main.storyboard */; };
 		6FAF35F7236830410042FE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF35F6236830410042FE65 /* Assets.xcassets */; };
 		6FAF35FA236830410042FE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAF35F8236830410042FE65 /* LaunchScreen.storyboard */; };
 		6FAF3605236830410042FE65 /* AR_Draw_App_Project_2019Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF3604236830410042FE65 /* AR_Draw_App_Project_2019Tests.swift */; };
 		6FAF3610236830410042FE65 /* AR_Draw_App_Project_2019UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF360F236830410042FE65 /* AR_Draw_App_Project_2019UITests.swift */; };
+		6FB4979C239512F7000153A1 /* DrawingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4979B239512F7000153A1 /* DrawingTableViewCell.swift */; };
+		6FB4979F2395214E000153A1 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4979E2395214E000153A1 /* Drawing.swift */; };
+		6FC087C723A65752007204B3 /* DocumentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC087C623A65752007204B3 /* DocumentHelper.swift */; };
+		6FC087C923AD1E37007204B3 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC087C823AD1E37007204B3 /* 120.png */; };
+		6FD3CB6A237999BA004CBA57 /* colorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD3CB69237999BA004CBA57 /* colorPicker.storyboard */; };
+		6FD3CB6D237999F7004CBA57 /* ColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3CB6C237999F7004CBA57 /* ColorPickerController.swift */; };
+		6FD3CB712379AC35004CBA57 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD3CB702379AC35004CBA57 /* ColorCollectionViewCell.swift */; };
+		7A3A29C300D629AB630370F7 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526D23B4174E4A00531595E8 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034BDFF12193CF5B7E4D6EF1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig"; sourceTree = "<group>"; };
+		309334364FDB0642EEC51826 /* Pods_AR_Draw_App_Project_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AR_Draw_App_Project_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A74EC34A9939CF302F5EF5A /* Pods-AR Draw App Project 2019Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019Tests.release.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4F6F0E082EC4B2BA16ACE59E /* Pods-AR Draw App Project 2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019.debug.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019.debug.xcconfig"; sourceTree = "<group>"; };
+		526D23B4174E4A00531595E8 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		618FB87EC0CA6725D28B1600 /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019Tests.debug.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6428BDE98D8811FABCC2BD65 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F0928772381732500CD6788 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		6F343C36239F91740072AC29 /* SavingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingHelper.swift; sourceTree = "<group>"; };
+		6F65C9BC23684B18008F9A4F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		6FAF35EA236830400042FE65 /* AR Draw App Project 2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Draw App Project 2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAF35ED236830400042FE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FAF35EF236830400042FE65 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		6FAF35F1236830400042FE65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FAF35F1236830400042FE65 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		6FAF35F4236830400042FE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FAF35F6236830410042FE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FAF35F9236830410042FE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,15 @@
 		6FAF360B236830410042FE65 /* AR Draw App Project 2019UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AR Draw App Project 2019UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAF360F236830410042FE65 /* AR_Draw_App_Project_2019UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_Draw_App_Project_2019UITests.swift; sourceTree = "<group>"; };
 		6FAF3611236830410042FE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB4979B239512F7000153A1 /* DrawingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTableViewCell.swift; sourceTree = "<group>"; };
+		6FB4979E2395214E000153A1 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		6FC087C623A65752007204B3 /* DocumentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentHelper.swift; sourceTree = "<group>"; };
+		6FC087C823AD1E37007204B3 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 120.png; path = ../../../../Downloads/Assets.xcassets/AppIcon.appiconset/120.png; sourceTree = "<group>"; };
+		6FD3CB69237999BA004CBA57 /* colorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = colorPicker.storyboard; sourceTree = "<group>"; };
+		6FD3CB6C237999F7004CBA57 /* ColorPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerController.swift; sourceTree = "<group>"; };
+		6FD3CB702379AC35004CBA57 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		9454C4617D2E8DF10C8936E6 /* Pods_AR_Draw_App_Project_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AR_Draw_App_Project_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02A739545C0FEF18AB94097 /* Pods-AR Draw App Project 2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Draw App Project 2019.release.xcconfig"; path = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22103B876F1841868E8CFEFA /* Pods_AR_Draw_App_Project_2019.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142B39AE7DC8DAE9EC1583D8 /* Pods_AR_Draw_App_Project_2019Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +104,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3A29C300D629AB630370F7 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5854D0F01169CE03D0E69FAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309334364FDB0642EEC51826 /* Pods_AR_Draw_App_Project_2019.framework */,
+				526D23B4174E4A00531595E8 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */,
+				9454C4617D2E8DF10C8936E6 /* Pods_AR_Draw_App_Project_2019Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F092876238172EF00CD6788 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6F0928772381732500CD6788 /* Color.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6F343C35239F91630072AC29 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F343C36239F91740072AC29 /* SavingHelper.swift */,
+				6FC087C623A65752007204B3 /* DocumentHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		6F50225423798B85004380E8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3CB6C237999F7004CBA57 /* ColorPickerController.swift */,
+				6FAF35F1236830400042FE65 /* ARController.swift */,
+				6F65C9BC23684B18008F9A4F /* HomeController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		6FAF35E1236830400042FE65 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +155,8 @@
 				6FAF3603236830410042FE65 /* AR Draw App Project 2019Tests */,
 				6FAF360E236830410042FE65 /* AR Draw App Project 2019UITests */,
 				6FAF35EB236830400042FE65 /* Products */,
+				EE229E08BD0BDE6C74F01217 /* Pods */,
+				5854D0F01169CE03D0E69FAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +173,18 @@
 		6FAF35EC236830400042FE65 /* AR Draw App Project 2019 */ = {
 			isa = PBXGroup;
 			children = (
+				6F343C35239F91630072AC29 /* helpers */,
+				6FB497A0239521F1000153A1 /* AR */,
+				6FB4979A239512E1000153A1 /* home */,
+				6FD3CB6423799775004CBA57 /* options */,
+				6F50225423798B85004380E8 /* controllers */,
 				6FAF35ED236830400042FE65 /* AppDelegate.swift */,
 				6FAF35EF236830400042FE65 /* art.scnassets */,
-				6FAF35F1236830400042FE65 /* ViewController.swift */,
 				6FAF35F3236830400042FE65 /* Main.storyboard */,
 				6FAF35F6236830410042FE65 /* Assets.xcassets */,
 				6FAF35F8236830410042FE65 /* LaunchScreen.storyboard */,
 				6FAF35FB236830410042FE65 /* Info.plist */,
+				6FC087C823AD1E37007204B3 /* 120.png */,
 			);
 			path = "AR Draw App Project 2019";
 			sourceTree = "<group>";
@@ -128,6 +207,53 @@
 			path = "AR Draw App Project 2019UITests";
 			sourceTree = "<group>";
 		};
+		6FB4979A239512E1000153A1 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				6FB4979B239512F7000153A1 /* DrawingTableViewCell.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		6FB4979D23952115000153A1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6FB4979E2395214E000153A1 /* Drawing.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6FB497A0239521F1000153A1 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				6FB4979D23952115000153A1 /* models */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		6FD3CB6423799775004CBA57 /* options */ = {
+			isa = PBXGroup;
+			children = (
+				6F092876238172EF00CD6788 /* models */,
+				6FD3CB69237999BA004CBA57 /* colorPicker.storyboard */,
+				6FD3CB702379AC35004CBA57 /* ColorCollectionViewCell.swift */,
+			);
+			path = options;
+			sourceTree = "<group>";
+		};
+		EE229E08BD0BDE6C74F01217 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F6F0E082EC4B2BA16ACE59E /* Pods-AR Draw App Project 2019.debug.xcconfig */,
+				C02A739545C0FEF18AB94097 /* Pods-AR Draw App Project 2019.release.xcconfig */,
+				6428BDE98D8811FABCC2BD65 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */,
+				034BDFF12193CF5B7E4D6EF1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */,
+				618FB87EC0CA6725D28B1600 /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */,
+				3A74EC34A9939CF302F5EF5A /* Pods-AR Draw App Project 2019Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FAF3614236830410042FE65 /* Build configuration list for PBXNativeTarget "AR Draw App Project 2019" */;
 			buildPhases = (
+				200E32AF07B064A2AFDCC0A4 /* [CP] Check Pods Manifest.lock */,
 				6FAF35E6236830400042FE65 /* Sources */,
 				6FAF35E7236830400042FE65 /* Frameworks */,
 				6FAF35E8236830400042FE65 /* Resources */,
+				BB965D90A56A16558FDA7C95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FAF3617236830410042FE65 /* Build configuration list for PBXNativeTarget "AR Draw App Project 2019Tests" */;
 			buildPhases = (
+				C98F4BB2963EFA6523788551 /* [CP] Check Pods Manifest.lock */,
 				6FAF35FC236830410042FE65 /* Sources */,
 				6FAF35FD236830410042FE65 /* Frameworks */,
 				6FAF35FE236830410042FE65 /* Resources */,
@@ -170,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FAF361A236830410042FE65 /* Build configuration list for PBXNativeTarget "AR Draw App Project 2019UITests" */;
 			buildPhases = (
+				65109279F60D35077BC5DDE5 /* [CP] Check Pods Manifest.lock */,
 				6FAF3607236830410042FE65 /* Sources */,
 				6FAF3608236830410042FE65 /* Frameworks */,
 				6FAF3609236830410042FE65 /* Resources */,
+				C0FDA948CAB52364EFAAB08E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +365,8 @@
 			files = (
 				6FAF35F0236830400042FE65 /* art.scnassets in Resources */,
 				6FAF35FA236830410042FE65 /* LaunchScreen.storyboard in Resources */,
+				6FD3CB6A237999BA004CBA57 /* colorPicker.storyboard in Resources */,
+				6FC087C923AD1E37007204B3 /* 120.png in Resources */,
 				6FAF35F7236830410042FE65 /* Assets.xcassets in Resources */,
 				6FAF35F5236830400042FE65 /* Main.storyboard in Resources */,
 			);
@@ -255,13 +388,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		200E32AF07B064A2AFDCC0A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AR Draw App Project 2019-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65109279F60D35077BC5DDE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB965D90A56A16558FDA7C95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0FDA948CAB52364EFAAB08E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C98F4BB2963EFA6523788551 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AR Draw App Project 2019Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6FAF35E6236830400042FE65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FAF35F2236830400042FE65 /* ViewController.swift in Sources */,
+				6FAF35F2236830400042FE65 /* ARController.swift in Sources */,
 				6FAF35EE236830400042FE65 /* AppDelegate.swift in Sources */,
+				6F65C9BD23684B18008F9A4F /* HomeController.swift in Sources */,
+				6FD3CB712379AC35004CBA57 /* ColorCollectionViewCell.swift in Sources */,
+				6F343C37239F91740072AC29 /* SavingHelper.swift in Sources */,
+				6FB4979F2395214E000153A1 /* Drawing.swift in Sources */,
+				6FC087C723A65752007204B3 /* DocumentHelper.swift in Sources */,
+				6FB4979C239512F7000153A1 /* DrawingTableViewCell.swift in Sources */,
+				6FD3CB6D237999F7004CBA57 /* ColorPickerController.swift in Sources */,
+				6F0928782381732500CD6788 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +676,7 @@
 		};
 		6FAF3615236830410042FE65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F6F0E082EC4B2BA16ACE59E /* Pods-AR Draw App Project 2019.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,7 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AR-Draw-App-Project-2019";
+				PRODUCT_BUNDLE_IDENTIFIER = ScenekitPrimTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,6 +695,7 @@
 		};
 		6FAF3616236830410042FE65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02A739545C0FEF18AB94097 /* Pods-AR Draw App Project 2019.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.AR-Draw-App-Project-2019";
+				PRODUCT_BUNDLE_IDENTIFIER = ScenekitPrimTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +714,7 @@
 		};
 		6FAF3618236830410042FE65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618FB87EC0CA6725D28B1600 /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +737,7 @@
 		};
 		6FAF3619236830410042FE65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A74EC34A9939CF302F5EF5A /* Pods-AR Draw App Project 2019Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +760,7 @@
 		};
 		6FAF361B236830410042FE65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6428BDE98D8811FABCC2BD65 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +781,7 @@
 		};
 		6FAF361C236830410042FE65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 034BDFF12193CF5B7E4D6EF1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
