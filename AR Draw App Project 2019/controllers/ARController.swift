@@ -12,13 +12,13 @@ class ARController: UIViewController, ARSCNViewDelegate {
     private var currentColor:UIColor = .black
     private var currentSize: CGFloat = 0.05
     private var placedNodes = [SCNNode]()
+    private var dataIndex = 0
     public var colors = [Color]()
     public var radia = [CGFloat]()
     private var savingHelper:SavingHelper?
     public var worldMap:ARWorldMap?
+    public var worldMapData:Drawing?
     public var isLoading:Bool = false
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +48,12 @@ class ARController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
         configuration.initialWorldMap = worldMap
-        /// bij meegeven van worldmap ook de kleur van de prev sessie opslagen en hier initten
-        print(worldMap)
+        if isLoading {
+            colors = worldMapData!.colors
+            radia = worldMapData!.radia
+        }
+        /// bij meegeven van worldmap ook de kleur van de prev sessie opslagen en hier initten TODO
+
         // hier komt de state van de opgeslagen sessie
         // configuration.initialWorldMap
         sceneView.session.run(configuration, options: [.resetTracking,.removeExistingAnchors])
@@ -76,20 +80,22 @@ class ARController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        
-        print("er is een node toegevoegd")
         /// waneer we in de loading state zijn moeten we de node attr. initialiseren met de arrays Colors, Sizes
+        var nodeColor:Color  = Color(col: currentColor )
+        var nodeSize:CGFloat = currentSize
         if isLoading {
-            
+            nodeColor = colors[dataIndex]
+            nodeSize = radia[dataIndex]
+            dataIndex += 1
+            if dataIndex > colors.count {
+                dataIndex = 0
+                isLoading = false
+            }
         }
         
-        var nColor:UIColor  = .black
-            
         guard !(anchor is ARPlaneAnchor) else {return}
-
-        nColor = currentColor ?? .black
         
-        let spNode = createNode()
+        let spNode = createNode(color: nodeColor, radius: nodeSize)
         
         DispatchQueue.main.async {
             node.addChildNode(spNode)
@@ -141,26 +147,24 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - NODE LOGICA
     
-    private func createNode() -> SCNNode {
+    private func createNode(color:Color,radius:CGFloat) -> SCNNode {
         let node = SCNNode()
         let geometry: SCNGeometry
-        geometry = SCNSphere(radius: currentSize)
+        geometry = SCNSphere(radius: radius)
         node.geometry = geometry
-        node.geometry?.firstMaterial?.diffuse.contents = self.currentColor
+        node.geometry?.firstMaterial?.diffuse.contents = color.uiColor
         colors.append(Color(col: currentColor))
         radia.append(currentSize)
         return node
     }
     
-
+    
     @objc func onSizeChange(){
         DispatchQueue.main.async {
             self.currentSize = CGFloat(self.sizeSlider.value)
         }
     }
-    
 
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "colorPickerSegue" {
             let colorPickerController = segue.destination as! ColorPickerController

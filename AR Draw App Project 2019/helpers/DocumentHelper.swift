@@ -17,6 +17,10 @@ public class DocumentHelper {
     }
     
     static func getParsedDocumentsContent() -> [String]{
+        /// wat er allemaal moet gebeuren :
+        /// enkel files met de AREXPERIENCE extension mogen getoond worden
+        /// daarna moet de .arexperience van de title gehaald worden
+        // tekst
         return getDocumentsContent().map{ $0.lastPathComponent }
     }
     
@@ -24,13 +28,9 @@ public class DocumentHelper {
         return getDocumentsContent().first(where: {$0.lastPathComponent == f})!
     }
     
- // static func getDrawingAtUrl(path:URL) -> Drawing {
- //
- //  }
-    
     static func getWorldMapAtPath(path:URL) -> ARWorldMap {
         /// hier dan worldmap ophalen en in ARCONTROLLER worldmap binden aan scene
-         let data = try?  Data(contentsOf: path)
+        let data = try?  Data(contentsOf: path)
         
         do {
             guard let worldMap = try NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data!)
@@ -39,6 +39,21 @@ public class DocumentHelper {
         } catch {
             fatalError("Can't unarchive ARWorldMap from file data: \(error)")
         }
+    }
+    
+    static func getWorldMapData(title:String) -> Drawing {
+        var drawing = Drawing(title: "", WRLDPath: "", colors: [Color](), radia:[CGFloat]())
+        /// naam.arexperience - .arexperience + ARDATA.plist
+        let dataString = title.substring(to: title.firstIndex(of: ".")!) + "ARDATA.plist"
+        let dataPath = getFilePath(f: dataString)
+        /// Decode de data naar een Drawing object
+        let propertyListDecoder = PropertyListDecoder()
+        if let retrDrawingData = try? Data(contentsOf: dataPath),
+            let decodedDrawing = try? propertyListDecoder.decode(Drawing.self, from: retrDrawingData){
+            print(decodedDrawing)
+            drawing = decodedDrawing
+        }
+        return drawing
     }
     
     static func removeFromDocuments(fileUrl:URL){

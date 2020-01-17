@@ -38,7 +38,6 @@ class SavingHelper {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler:{ (UIAlertAction) in
             
-            
             scene.session.getCurrentWorldMap { worldMap, error in
                 guard let map = worldMap
                     
@@ -51,7 +50,7 @@ class SavingHelper {
                 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 let mapURL = documentsDirectory.appendingPathComponent(newDrawing.title + ".arexperience")
                 /// data die hoort bij de worldmap, kleuren + radia
-                let dataURL = documentsDirectory.appendingPathComponent(newDrawing.title + "ARDATA")
+                
                 
                 do {
                     /// Schrijf de worldmap weg
@@ -63,14 +62,11 @@ class SavingHelper {
                 }
                 
                 do {
-                    /// data moet eerst omgezet worden naar bytes vooralleer NS de data accepteerd
-                    let encodedData = NSMutableData()
-                    let archiver = NSKeyedArchiver(forWritingWith: encodedData)
-                    try! archiver.encodeEncodable(newDrawing, forKey: NSKeyedArchiveRootObjectKey)
-                    archiver.finishEncoding()
+                    let dataURL = documentsDirectory.appendingPathComponent(newDrawing.title + "ARDATA").appendingPathExtension("plist")
+                    let propertyListEncoder = PropertyListEncoder()
+                    let encodedData = try? propertyListEncoder.encode(newDrawing)
+                    try? encodedData?.write(to: dataURL,options: .noFileProtection)
                     
-                    let data = try NSKeyedArchiver.archivedData(withRootObject: encodedData, requiringSecureCoding: true)
-                    try data.write(to: dataURL)
                 } catch{
                     fatalError("Could not persist data:\(error.localizedDescription)")
                 }

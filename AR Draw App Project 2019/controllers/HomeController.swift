@@ -7,6 +7,7 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var drawingsTable:UITableView!
     var drawings: [String] = [] // var tableData
     var loadedMAP:ARWorldMap?
+    var loadedMapData:Drawing?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +57,11 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         print("item clicked")
         print(DocumentHelper.getFilePath(f: drawings[indexPath.item]))
         let loadedWorldmap = DocumentHelper.getWorldMapAtPath(path: DocumentHelper.getFilePath(f: drawings[indexPath.item]))
+        let loadedWorldmapData = DocumentHelper.getWorldMapData(title: drawings[indexPath.item]) /// deze meegeven met prepare
         let destination = ARController()
         
         loadedMAP = loadedWorldmap
-        
+        loadedMapData = loadedWorldmapData
         performSegue(withIdentifier: "loadSCN", sender: self)
     }
     
@@ -76,9 +78,8 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
            if segue.identifier == "loadSCN" {
                let arController = segue.destination as! ARController
             arController.worldMap = loadedMAP
-            //arController.colors =
+            arController.worldMapData = loadedMapData
             arController.isLoading = true
-            
            }
        }
 }
