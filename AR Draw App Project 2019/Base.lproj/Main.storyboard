@@ -66,6 +66,7 @@
                         <outlet property="drawingsTable" destination="wOO-Uq-bN8" id="ioo-rz-MSF"/>
                         <outlet property="newDrawingBtn" destination="UPT-75-zPK" id="8cu-Hv-gLL"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="toNewSCN" id="t4U-ue-9rk"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="loadSCN" id="Kr9-zX-Vef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQF-cw-B5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -94,18 +95,6 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-AH-yKp">
                                 <rect key="frame" x="38" y="803" width="338" height="31"/>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVU-Kk-pgk">
-                                <rect key="frame" x="346" y="108" width="48" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="Foa-In-ppK"/>
-                                    <constraint firstAttribute="height" constant="38" id="sdt-zR-rRb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" image="ellipsis" catalog="system"/>
-                                <connections>
-                                    <action selector="displayOptionsForSelectedItem:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Fj-67-H55"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-pb-pDc">
                                 <rect key="frame" x="304" y="699" width="90" height="90"/>
                                 <constraints>
@@ -122,9 +111,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="DVU-Kk-pgk" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="20" id="LYc-4Z-EdU"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="aeH-AH-yKp" secondAttribute="trailing" constant="40" id="PFd-DP-Bii"/>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="DVU-Kk-pgk" secondAttribute="trailing" constant="20" id="XbF-2M-ad2"/>
                             <constraint firstItem="aeH-AH-yKp" firstAttribute="top" secondItem="F6n-pb-pDc" secondAttribute="bottom" constant="14" id="aPR-5e-u3e"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="F6n-pb-pDc" secondAttribute="trailing" constant="20" id="gg0-SP-zhK"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="aeH-AH-yKp" secondAttribute="bottom" constant="29" id="nB6-Lq-MG3"/>
@@ -132,7 +119,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="heW-9D-bUZ"/>
+                    <navigationItem key="navigationItem" id="heW-9D-bUZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="R23-o9-1t1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DVU-Kk-pgk">
+                                <rect key="frame" x="346" y="0.0" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Foa-In-ppK"/>
+                                    <constraint firstAttribute="height" constant="38" id="sdt-zR-rRb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" image="ellipsis" catalog="system"/>
+                                <connections>
+                                    <action selector="displayOptionsForSelectedItem:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Fj-67-H55"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="drawBtn" destination="F6n-pb-pDc" id="Z1v-nN-Ob3"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
@@ -180,4 +183,7 @@
         <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kr9-zX-Vef"/>
+    </inferredMetricsTieBreakers>
 </document>

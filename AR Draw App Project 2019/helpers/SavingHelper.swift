@@ -10,17 +10,18 @@ import UIKit
 import ARKit
 
 protocol Saving : class {
-  func  didSave()
+    func  didSave()
 }
 
 class SavingHelper {
-
+    
     
     private var tField: UITextField!
+    private var wrldMap:ARWorldMap?
     var delegate: Saving?
-    
-    func saveDrawing( scene: ARSCNView) -> (UIAlertController) {
-                
+    ///ipv sceneview worldmap, dan nog een array van colors en een array van sizes
+    func saveDrawing( scene: ARSCNView,colors: [Color],radia:[CGFloat]) -> (UIAlertController) {
+        
         func configurationTextField(textField: UITextField!) {
             print("generating the TextField")
             textField.placeholder = "Enter an item"
@@ -37,16 +38,46 @@ class SavingHelper {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:handleCancel))
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler:{ (UIAlertAction) in
             
-            //logica voor het wegschrijven
-            let title = self.tField.text ?? "drawing (deze waarde mss incrementen)"
-            let newDrawing = Drawing(title: title, SCNPath: title)
-            let currentScene = scene.scene
-            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let archiveURL = documentsDirectory.appendingPathComponent(newDrawing.title + ".scn")
-        
-         
-            currentScene.write(to: archiveURL, options: nil, delegate: nil, progressHandler: nil)
-            self.delegate?.didSave()
+            
+            scene.session.getCurrentWorldMap { worldMap, error in
+                guard let map = worldMap
+                    
+                    else {  return }
+                self.wrldMap = map
+                
+                let title = self.tField.text ?? "drawing (deze waarde mss incrementen)"
+                let newDrawing = Drawing(title: title, WRLDPath: title, colors:colors, radia:radia)
+                let currentScene = scene.scene
+                let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                let mapURL = documentsDirectory.appendingPathComponent(newDrawing.title + ".arexperience")
+                /// data die hoort bij de worldmap, kleuren + radia
+                let dataURL = documentsDirectory.appendingPathComponent(newDrawing.title + "ARDATA")
+                
+                do {
+                    /// Schrijf de worldmap weg
+                    let data = try NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true)
+                    try data.write(to: mapURL, options: [.atomic])
+                    /// hier stond didsave call naar delegate
+                } catch {
+                    fatalError("Can't save map: \(error.localizedDescription)")
+                }
+                
+                do {
+                    /// data moet eerst omgezet worden naar bytes vooralleer NS de data accepteerd
+                    let encodedData = NSMutableData()
+                    let archiver = NSKeyedArchiver(forWritingWith: encodedData)
+                    try! archiver.encodeEncodable(newDrawing, forKey: NSKeyedArchiveRootObjectKey)
+                    archiver.finishEncoding()
+                    
+                    let data = try NSKeyedArchiver.archivedData(withRootObject: encodedData, requiringSecureCoding: true)
+                    try data.write(to: dataURL)
+                } catch{
+                    fatalError("Could not persist data:\(error.localizedDescription)")
+                }
+                self.delegate?.didSave()
+                
+            }
+            
         }))
         
         return alert

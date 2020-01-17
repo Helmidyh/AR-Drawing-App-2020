@@ -9,9 +9,16 @@ class ARController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var settingsBtn: UIButton!
     @IBOutlet var drawBtn: UIButton!
     @IBOutlet var sizeSlider:UISlider!
-    private var currentColor:UIColor?
+    private var currentColor:UIColor = .black
+    private var currentSize: CGFloat = 0.05
     private var placedNodes = [SCNNode]()
+    public var colors = [Color]()
+    public var radia = [CGFloat]()
     private var savingHelper:SavingHelper?
+    public var worldMap:ARWorldMap?
+    public var isLoading:Bool = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +26,15 @@ class ARController: UIViewController, ARSCNViewDelegate {
         savingHelper = SavingHelper()
         savingHelper?.delegate = self
         
+        sceneView.autoenablesDefaultLighting = true
+        sceneView.automaticallyUpdatesLighting = true
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
+        self.sizeSlider.addTarget(self, action: #selector(ARController.onSizeChange), for: UIControl.Event.valueChanged)
         
         let defaults = UserDefaults.standard
         let colorData = defaults.object(forKey: "selectedColor") as? Data ?? Data()
@@ -35,7 +47,12 @@ class ARController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
+        configuration.initialWorldMap = worldMap
+        /// bij meegeven van worldmap ook de kleur van de prev sessie opslagen en hier initten
+        print(worldMap)
+        // hier komt de state van de opgeslagen sessie
+        // configuration.initialWorldMap
+        sceneView.session.run(configuration, options: [.resetTracking,.removeExistingAnchors])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +75,27 @@ class ARController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
     }
     
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        print("er is een node toegevoegd")
+        /// waneer we in de loading state zijn moeten we de node attr. initialiseren met de arrays Colors, Sizes
+        if isLoading {
+            
+        }
+        
+        var nColor:UIColor  = .black
+            
+        guard !(anchor is ARPlaneAnchor) else {return}
+
+        nColor = currentColor ?? .black
+        
+        let spNode = createNode()
+        
+        DispatchQueue.main.async {
+            node.addChildNode(spNode)
+        }
+    }
+    
     // deze functionaliteit kan mss in een aparte controler komen
     @IBAction func displayOptionsForSelectedItem (_ sender:UIButton!) {
         let alert = UIAlertController(title: "Options", message: nil, preferredStyle: .actionSheet)
@@ -78,7 +116,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     @IBAction func saveDrawing () {
         let fileCount = DocumentHelper.getDocumentsContent().count
         
-        guard let savingReturn = (savingHelper?.saveDrawing(scene: self.sceneView)) else {
+        guard let savingReturn = (savingHelper?.saveDrawing(scene: self.sceneView,colors: colors,radia: radia)) else {
             return
         } //condition drawing is gesaved ?
         self.present(savingReturn,animated: true,completion: {
@@ -89,34 +127,39 @@ class ARController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func drawButtonPressed() {
-        addNodeInFront(createNode(color: self.currentColor ?? UIColor.black))
+        /// anchor locatie voor waar de node komt
+        guard let currentFrame = sceneView.session.currentFrame else { return }
+        var translation = matrix_identity_float4x4
+        /// Node 30 cm voor de camera plaatsen
+        translation.columns.3.z = -0.6
+        /// simdTransform is wat we gaan gebruiken om een nieuwe anchor aan te maken
+        let anchor = ARAnchor(transform: matrix_multiply(currentFrame.camera.transform, translation))
+        
+        sceneView.session.add(anchor: anchor)
+        
     }
     
     // MARK: - NODE LOGICA
     
-    private func createNode(color: UIColor) -> SCNNode {
+    private func createNode() -> SCNNode {
+        let node = SCNNode()
         let geometry: SCNGeometry
-        let meters: CGFloat
-        meters = CGFloat(sizeSlider.value)
-        geometry = SCNSphere(radius: meters)
-        geometry.firstMaterial?.diffuse.contents = color
-        return SCNNode(geometry: geometry)
+        geometry = SCNSphere(radius: currentSize)
+        node.geometry = geometry
+        node.geometry?.firstMaterial?.diffuse.contents = self.currentColor
+        colors.append(Color(col: currentColor))
+        radia.append(currentSize)
+        return node
     }
     
-    func addNodeInFront (_ node: SCNNode){
-        guard let currentFrame = sceneView.session.currentFrame else { return }
-        var translation = matrix_identity_float4x4
-        //Node 30 cm voor de camera plaatsen
-        translation.columns.3.z = -0.6
-        node.simdTransform = matrix_multiply(currentFrame.camera.transform, translation)
-        addNodeToSceneRoot(node)
+
+    @objc func onSizeChange(){
+        DispatchQueue.main.async {
+            self.currentSize = CGFloat(self.sizeSlider.value)
+        }
     }
     
-    func addNodeToSceneRoot(_ node:SCNNode){
-        let cloneNode = node.clone()
-        sceneView.scene.rootNode.addChildNode(cloneNode)
-        placedNodes.append(cloneNode)
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "colorPickerSegue" {

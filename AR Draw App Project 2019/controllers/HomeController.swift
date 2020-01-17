@@ -1,11 +1,12 @@
 
 import UIKit
-
+import ARKit
 class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet var newDrawingBtn:UIButton!
     @IBOutlet weak var drawingsTable:UITableView!
     var drawings: [String] = [] // var tableData
+    var loadedMAP:ARWorldMap?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +33,13 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         performSegue(withIdentifier: "toNewSCN", sender: nil)
         
     }
-    //    @IBAction func loadDrawing(_ :Any){
-    //        performSegue(withIdentifier: "loadSCN", sender: nil)
-    //
-    //
-    //    }
-    //
+    
+    @IBAction func loadDrawing(_ :Any){
+        performSegue(withIdentifier: "loadSCN", sender: nil)
+        
+        
+    }
+    
     // MARK: - TABELVIEW DEL + SRC
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +53,14 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("item clicked")
+        print(DocumentHelper.getFilePath(f: drawings[indexPath.item]))
+        let loadedWorldmap = DocumentHelper.getWorldMapAtPath(path: DocumentHelper.getFilePath(f: drawings[indexPath.item]))
+        let destination = ARController()
         
+        loadedMAP = loadedWorldmap
+        
+        performSegue(withIdentifier: "loadSCN", sender: self)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -63,5 +72,13 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "loadSCN" {
+               let arController = segue.destination as! ARController
+            arController.worldMap = loadedMAP
+            //arController.colors =
+            arController.isLoading = true
+            
+           }
+       }
 }
