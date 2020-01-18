@@ -16,7 +16,7 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         drawingsTable.delegate = self
         drawingsTable.register(UITableViewCell.self, forCellReuseIdentifier: "DrawingTableViewCell")
         drawings = DocumentHelper.getParsedDocumentsContent()
-        
+        print(DocumentHelper.getDocumentsContent())
     }
     override func viewWillAppear(_ animated: Bool) {
         drawings = DocumentHelper.getParsedDocumentsContent()
@@ -55,9 +55,9 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("item clicked")
-        print(DocumentHelper.getFilePath(f: drawings[indexPath.item]))
-        let loadedWorldmap = DocumentHelper.getWorldMapAtPath(path: DocumentHelper.getFilePath(f: drawings[indexPath.item]))
-        let loadedWorldmapData = DocumentHelper.getWorldMapData(title: drawings[indexPath.item]) /// deze meegeven met prepare
+        print(DocumentHelper.getFilePath(f: drawings[indexPath.item] + ".arexperience"))
+        let loadedWorldmap = DocumentHelper.getWorldMapAtPath(path: DocumentHelper.getFilePath(f: drawings[indexPath.item] + ".arexperience"))
+        let loadedWorldmapData = DocumentHelper.getWorldMapData(title: drawings[indexPath.item] ) /// deze meegeven met prepare
         let destination = ARController()
         
         loadedMAP = loadedWorldmap
@@ -68,10 +68,16 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let x =  DocumentHelper.getDocumentsContent()
+            
+            print(x[indexPath.row])
             DocumentHelper.removeFromDocuments(fileUrl: x[indexPath.row])
+            DocumentHelper.removeFromDocuments(fileUrl: DocumentHelper.getFilePath(f: drawings[indexPath.row] + "ARDATA.plist"))
+           
             drawings.remove(at: indexPath.row)
             //remove row from tableview en documents
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            print(DocumentHelper.getDocumentsContent())
+            
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

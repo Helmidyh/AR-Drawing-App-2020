@@ -13,6 +13,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     private var currentSize: CGFloat = 0.05
     private var placedNodes = [SCNNode]()
     private var dataIndex = 0
+    private var timer:Timer!
     public var colors = [Color]()
     public var radia = [CGFloat]()
     private var savingHelper:SavingHelper?
@@ -42,6 +43,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
         if let decodedColor = try? propertyListDecoder.decode(Color.self,from: colorData){
             print(decodedColor.self.uiColor)
         }
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +93,8 @@ class ARController: UIViewController, ARSCNViewDelegate {
             if dataIndex > colors.count {
                 dataIndex = 0
                 isLoading = false
+                colors = [Color]()
+                radia = [CGFloat]()
             }
         }
         
@@ -132,18 +137,28 @@ class ARController: UIViewController, ARSCNViewDelegate {
         })
     }
     
-    @IBAction func drawButtonPressed() {
-        /// anchor locatie voor waar de node komt
-        guard let currentFrame = sceneView.session.currentFrame else { return }
-        var translation = matrix_identity_float4x4
-        /// Node 30 cm voor de camera plaatsen
-        translation.columns.3.z = -0.6
-        /// simdTransform is wat we gaan gebruiken om een nieuwe anchor aan te maken
-        let anchor = ARAnchor(transform: matrix_multiply(currentFrame.camera.transform, translation))
-        
-        sceneView.session.add(anchor: anchor)
-        
+    @IBAction func drawButtonPressed(sender:AnyObject) {
+        draw()
+          timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector:#selector(draw), userInfo: nil, repeats: true)
+
     }
+    
+    @IBAction func drawButtonReleased(sender:AnyObject){
+        timer.invalidate()
+    }
+    
+    @objc func draw(){
+        /// anchor locatie voor waar de node komt
+            guard let currentFrame = sceneView.session.currentFrame else { return }
+            var translation = matrix_identity_float4x4
+            /// Node 30 cm voor de camera plaatsen
+            translation.columns.3.z = -0.6
+            /// simdTransform is wat we gaan gebruiken om een nieuwe anchor aan te maken
+            let anchor = ARAnchor(transform: matrix_multiply(currentFrame.camera.transform, translation))
+            
+            sceneView.session.add(anchor: anchor)
+    }
+  
     
     // MARK: - NODE LOGICA
     

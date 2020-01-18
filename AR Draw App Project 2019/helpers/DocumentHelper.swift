@@ -21,11 +21,13 @@ public class DocumentHelper {
         /// enkel files met de AREXPERIENCE extension mogen getoond worden
         /// daarna moet de .arexperience van de title gehaald worden
         // tekst
-        return getDocumentsContent().map{ $0.lastPathComponent }
+        var x = getDocumentsContent().map{ $0.lastPathComponent }
+        var y = x.filter{ $0.contains(".arexperience")}.map{ $0.substring(to: $0.firstIndex(of: ".")!)}
+        return y
     }
     
     static func getFilePath(f:String) -> URL{
-        return getDocumentsContent().first(where: {$0.lastPathComponent == f})!
+        return getDocumentsContent().first(where: {$0.lastPathComponent == f })!
     }
     
     static func getWorldMapAtPath(path:URL) -> ARWorldMap {
@@ -44,7 +46,7 @@ public class DocumentHelper {
     static func getWorldMapData(title:String) -> Drawing {
         var drawing = Drawing(title: "", WRLDPath: "", colors: [Color](), radia:[CGFloat]())
         /// naam.arexperience - .arexperience + ARDATA.plist
-        let dataString = title.substring(to: title.firstIndex(of: ".")!) + "ARDATA.plist"
+        let dataString = title + "ARDATA.plist"
         let dataPath = getFilePath(f: dataString)
         /// Decode de data naar een Drawing object
         let propertyListDecoder = PropertyListDecoder()

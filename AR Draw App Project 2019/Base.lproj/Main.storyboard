@@ -105,7 +105,8 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="67" scale="default"/>
                                 </state>
                                 <connections>
-                                    <action selector="drawButtonPressed" destination="BV1-FR-VrT" eventType="touchUpInside" id="Ttt-yR-qx5"/>
+                                    <action selector="drawButtonPressedWithSender:" destination="BV1-FR-VrT" eventType="touchDown" id="fZ0-xj-4oT"/>
+                                    <action selector="drawButtonReleasedWithSender:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YHt-KI-KEg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +122,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="heW-9D-bUZ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="R23-o9-1t1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DVU-Kk-pgk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DVU-Kk-pgk">
                                 <rect key="frame" x="346" y="0.0" width="48" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
