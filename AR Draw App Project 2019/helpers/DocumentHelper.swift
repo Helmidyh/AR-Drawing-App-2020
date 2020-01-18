@@ -17,12 +17,10 @@ public class DocumentHelper {
     }
     
     static func getParsedDocumentsContent() -> [String]{
-        /// wat er allemaal moet gebeuren :
         /// enkel files met de AREXPERIENCE extension mogen getoond worden
         /// daarna moet de .arexperience van de title gehaald worden
-        // tekst
-        var x = getDocumentsContent().map{ $0.lastPathComponent }
-        var y = x.filter{ $0.contains(".arexperience")}.map{ $0.substring(to: $0.firstIndex(of: ".")!)}
+        let x = getDocumentsContent().map{ $0.lastPathComponent }
+        let y = x.filter{ $0.contains(".arexperience")}.map{ $0.substring(to: $0.firstIndex(of: ".")!)}
         return y
     }
     
@@ -52,7 +50,6 @@ public class DocumentHelper {
         let propertyListDecoder = PropertyListDecoder()
         if let retrDrawingData = try? Data(contentsOf: dataPath),
             let decodedDrawing = try? propertyListDecoder.decode(Drawing.self, from: retrDrawingData){
-            print(decodedDrawing)
             drawing = decodedDrawing
         }
         return drawing

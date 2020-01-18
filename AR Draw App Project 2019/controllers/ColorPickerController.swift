@@ -28,7 +28,7 @@ class ColorPickerController: UIViewController,UICollectionViewDataSource,UIColle
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        // alle kleuren moeten geEncode worden en dan weggeschreven worden in userDefaults
+        /// alle kleuren moeten geEncode worden en dan weggeschreven worden in userDefaults
         encodeColors()
     }
     
@@ -121,7 +121,7 @@ class ColorPickerController: UIViewController,UICollectionViewDataSource,UIColle
     }
     
     func colorViewController(_ colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {
-        //wanneer de gebruiker een kleur selecteerd maken we een nieuwe kleur aan
+        ///wanneer de gebruiker een kleur selecteerd maken we een nieuwe kleur aan
         newColor = Color(col: color)
     }
     
@@ -129,8 +129,8 @@ class ColorPickerController: UIViewController,UICollectionViewDataSource,UIColle
         self.dismiss(animated: true) {
             [weak self] in
             if let _ = self {
-                //wanneer de colorPicker gesloten wordt dan voegen we de nieuwe kleur to aan de kleuren Array
-                //daarna voegen we ook een nieuwe kleurencell toe aan de collectionview
+                ///wanneer de colorPicker gesloten wordt dan voegen we de nieuwe kleur to aan de kleuren Array
+                ///daarna voegen we ook een nieuwe kleurencell toe aan de collectionview
                 self!.items.append(self!.newColor)
                 self!.col.insertItems(at: [IndexPath(row:(self?.items.count)! - 1,section: 0)])
             }

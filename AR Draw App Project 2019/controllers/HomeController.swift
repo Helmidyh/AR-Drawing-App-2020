@@ -5,7 +5,7 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet var newDrawingBtn:UIButton!
     @IBOutlet weak var drawingsTable:UITableView!
-    var drawings: [String] = [] // var tableData
+    var drawings: [String] = []
     var loadedMAP:ARWorldMap?
     var loadedMapData:Drawing?
     
@@ -16,13 +16,11 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         drawingsTable.delegate = self
         drawingsTable.register(UITableViewCell.self, forCellReuseIdentifier: "DrawingTableViewCell")
         drawings = DocumentHelper.getParsedDocumentsContent()
-        print(DocumentHelper.getDocumentsContent())
     }
     override func viewWillAppear(_ animated: Bool) {
         drawings = DocumentHelper.getParsedDocumentsContent()
         self.drawingsTable.reloadData()
         super.viewWillAppear(animated)
-        
         
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,8 +35,6 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBAction func loadDrawing(_ :Any){
         performSegue(withIdentifier: "loadSCN", sender: nil)
-        
-        
     }
     
     // MARK: - TABELVIEW DEL + SRC
@@ -54,12 +50,9 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("item clicked")
-        print(DocumentHelper.getFilePath(f: drawings[indexPath.item] + ".arexperience"))
         let loadedWorldmap = DocumentHelper.getWorldMapAtPath(path: DocumentHelper.getFilePath(f: drawings[indexPath.item] + ".arexperience"))
-        let loadedWorldmapData = DocumentHelper.getWorldMapData(title: drawings[indexPath.item] ) /// deze meegeven met prepare
-        let destination = ARController()
-        
+        let loadedWorldmapData = DocumentHelper.getWorldMapData(title: drawings[indexPath.item] )
+        /// meegeven met prepare
         loadedMAP = loadedWorldmap
         loadedMapData = loadedWorldmapData
         performSegue(withIdentifier: "loadSCN", sender: self)
@@ -68,24 +61,19 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let x =  DocumentHelper.getDocumentsContent()
-            
-            print(x[indexPath.row])
-            DocumentHelper.removeFromDocuments(fileUrl: x[indexPath.row])
+            /// eerst de data deleten, dan het label
             DocumentHelper.removeFromDocuments(fileUrl: DocumentHelper.getFilePath(f: drawings[indexPath.row] + "ARDATA.plist"))
-           
+                  DocumentHelper.removeFromDocuments(fileUrl: x[indexPath.row])
             drawings.remove(at: indexPath.row)
-            //remove row from tableview en documents
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            print(DocumentHelper.getDocumentsContent())
-            
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "loadSCN" {
-               let arController = segue.destination as! ARController
+        if segue.identifier == "loadSCN" {
+            let arController = segue.destination as! ARController
             arController.worldMap = loadedMAP
             arController.worldMapData = loadedMapData
             arController.isLoading = true
-           }
-       }
+        }
+    }
 }

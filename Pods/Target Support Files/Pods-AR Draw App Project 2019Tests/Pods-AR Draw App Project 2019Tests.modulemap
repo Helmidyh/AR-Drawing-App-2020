@@ -1,0 +1,6 @@
+framework module Pods_AR_Draw_App_Project_2019Tests {
+  umbrella header "Pods-AR Draw App Project 2019Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

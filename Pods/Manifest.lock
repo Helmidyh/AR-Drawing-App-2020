@@ -1,0 +1,20 @@
+PODS:
+  - EFColorPicker (5.1.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - EFColorPicker
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - EFColorPicker
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  EFColorPicker: 6fa37bd9cde0f8dc58762698f1e9809f554dfe6c
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 20cbaacdfc06cc79677e9af9a9c7ad44e8c51c1f
+
+COCOAPODS: 1.8.4

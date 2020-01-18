@@ -1,0 +1,1207 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D0033C2D248F75EC059A6E8CD7E0EB2 /* Pods-AR Draw App Project 2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7218641A10B117BA9EB2DB6FE366862A /* Pods-AR Draw App Project 2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19ED09EA34ACD4291A801AD76445B7CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		2024EE5E265681137A9FEBC630E6E0F1 /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFB72DE26A9AF19A0F009DFAB4F1D28 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21B2F5BF8E4AAE580F72DB22B13DFD4B /* EFControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294763F5A7C4A34BF35C5B33A544DADA /* EFControl.swift */; };
+		22DC4FDFFE9660BB4D9853F41965ABA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		2E51B770DA56F194F901B2583F71439C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 347AB54A703545DE4A7E64AEB3C3E17C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FD5C68BEB78435C2801F2C3F4335DA7 /* EFColorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941C0C9CA30C5524EFE2E15E1405702D /* EFColorWheelView.swift */; };
+		35D5EE27A6C5A0D37D7D8CB37C46A567 /* Pods-AR Draw App Project 2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE54A75A86C6A6E3AB5C2209694B262 /* Pods-AR Draw App Project 2019-dummy.m */; };
+		4753716AE7A1AB22FB6BA61AA74D942F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4FE6769E7751BE6C3C52F7A02FB5E /* Toast.swift */; };
+		58360C2A6DD8370CE63B532962A86C28 /* EFColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63274C51F17B642A8602FEC3BB7D4809 /* EFColorView.swift */; };
+		5D7F3D3F52B5D12D44AF49B79BE91B6B /* EFColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A900FDBA77A8417E0E08100AAF9AD6E /* EFColorUtils.swift */; };
+		5E3FD92A4069F26516AD53747EB6BF42 /* EFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CAA4F4CADD814022D8581592A0A1CF /* EFSliderView.swift */; };
+		671564EDAB2CB22CA1C06BB41908BCD8 /* EFColorComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01409F6DD7F0F9826DB53C07878AA503 /* EFColorComponentView.swift */; };
+		6AA7A830F345934B74EC240B704221E6 /* Pods-AR Draw App Project 2019Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 119B00D07C3C388B3D7013A86339F9B9 /* Pods-AR Draw App Project 2019Tests-dummy.m */; };
+		6B326644BB08AEDF697A82A0F1A66D68 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8749BFA4B1BCE373BC3EAFCEAADBF687 /* Toast-Swift-dummy.m */; };
+		8894B7886EBB710B2BD0F0FA3F8D7802 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD23A66B567839A59A63AD00EEBE0AAA /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m */; };
+		95ACABC71585D657249CC92BA7731A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		98D6770E12918C9CD891E768C133B2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		9E5DA7A911EEC1A37E43457C9BAE2AEE /* Pods-AR Draw App Project 2019Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC5DA4EC685F97B4AFA4300C354CC40 /* Pods-AR Draw App Project 2019Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5EAD031921FA5E1A52902C753CE8A32 /* EFRGBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A392FA95B963DECA688F83632F0CE /* EFRGBView.swift */; };
+		C06D290B9216533843023A0BF93F5927 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */; };
+		D11276F0980922C29872C27F104A523D /* EFColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F42F8A022DFF8A6DFE8155DD40097 /* EFColorSelectionViewController.swift */; };
+		DB5C1ABDF1DB16B7F1BC8963A086AC40 /* EFColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E1A76285E2C818D7B294F12DE31DDA /* EFColorPicker-dummy.m */; };
+		DE4859DD84B440FEF83FE43CF1C39092 /* EFHSBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7E8D9A1D7B2F04A8E27B0B0AC7A2E /* EFHSBView.swift */; };
+		E9600CF76022F32BF6460C40A82928AF /* EFColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EBABDE437923CD4942893EB9F7D974 /* EFColorSelectionView.swift */; };
+		EFB3315E266F1F38EE0BA0CC585ADC41 /* EFThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CEFB1347E13BA5C68BD88CF7BF5953 /* EFThumbView.swift */; };
+		F73E63C40DB3360E7DA9E7FB33B77C40 /* EFColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 254BAE8C50523EB1B25294171915D788 /* EFColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F908619CDAD978D19229020BA8A90BF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		007F18BA5546CCBEA9E71CA018C846C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1D9174A2AA6C1DF0AB79B3EA35BB3E1;
+			remoteInfo = "Pods-AR Draw App Project 2019";
+		};
+		2748FC633ADA266BD0D9DBA6A1ABEC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C4B8A82C294B3A8FCCFF8B30559381;
+			remoteInfo = EFColorPicker;
+		};
+		4213BD03D2E68500CB668EE4FE9B39BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B990BD87169C76A3ED3FE8A9258D91A3;
+			remoteInfo = "Toast-Swift";
+		};
+		608EA091857A1FE1A337D4F77AE62757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B990BD87169C76A3ED3FE8A9258D91A3;
+			remoteInfo = "Toast-Swift";
+		};
+		AB8AD782C3263B59FCAF66C763E0A92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C4B8A82C294B3A8FCCFF8B30559381;
+			remoteInfo = EFColorPicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01409F6DD7F0F9826DB53C07878AA503 /* EFColorComponentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorComponentView.swift; path = EFColorPicker/Classes/EFColorComponentView.swift; sourceTree = "<group>"; };
+		027E79665BDB025CD6A9A134594562AC /* Pods-AR Draw App Project 2019-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AR Draw App Project 2019-frameworks.sh"; sourceTree = "<group>"; };
+		073B05A325B3F90B708D16A732A81746 /* Pods_AR_Draw_App_Project_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AR_Draw_App_Project_2019Tests.framework; path = "Pods-AR Draw App Project 2019Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFB72DE26A9AF19A0F009DFAB4F1D28 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
+		119B00D07C3C388B3D7013A86339F9B9 /* Pods-AR Draw App Project 2019Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AR Draw App Project 2019Tests-dummy.m"; sourceTree = "<group>"; };
+		12CEFB1347E13BA5C68BD88CF7BF5953 /* EFThumbView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFThumbView.swift; path = EFColorPicker/Classes/EFThumbView.swift; sourceTree = "<group>"; };
+		135F42F8A022DFF8A6DFE8155DD40097 /* EFColorSelectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorSelectionViewController.swift; path = EFColorPicker/Classes/EFColorSelectionViewController.swift; sourceTree = "<group>"; };
+		1ACBF4E3EB0538A3DC3F54A5433B46F0 /* Pods-AR Draw App Project 2019Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AR Draw App Project 2019Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1B99FBDE7428539536BFB2B953CC5AC4 /* Pods-AR Draw App Project 2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AR Draw App Project 2019.modulemap"; sourceTree = "<group>"; };
+		224DEC5120AFFB4957A34949778A0AFD /* Pods-AR Draw App Project 2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019-Info.plist"; sourceTree = "<group>"; };
+		254BAE8C50523EB1B25294171915D788 /* EFColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		294763F5A7C4A34BF35C5B33A544DADA /* EFControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFControl.swift; path = EFColorPicker/Classes/EFControl.swift; sourceTree = "<group>"; };
+		2A70F640266FB74E2693DF999521E5B8 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A900FDBA77A8417E0E08100AAF9AD6E /* EFColorUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorUtils.swift; path = EFColorPicker/Classes/EFColorUtils.swift; sourceTree = "<group>"; };
+		2C2634A0983C76A8CCD168268A36D2AF /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-Info.plist"; sourceTree = "<group>"; };
+		2DC5DA4EC685F97B4AFA4300C354CC40 /* Pods-AR Draw App Project 2019Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AR Draw App Project 2019Tests-umbrella.h"; sourceTree = "<group>"; };
+		30DF6B9166771BBF605459B02037A1D2 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		347AB54A703545DE4A7E64AEB3C3E17C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h"; sourceTree = "<group>"; };
+		37CCC92297D407AD055B856507B109F1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig"; sourceTree = "<group>"; };
+		49E8BA15E65C71BF20E7ECAFF531678C /* Pods-AR Draw App Project 2019Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4BE54A75A86C6A6E3AB5C2209694B262 /* Pods-AR Draw App Project 2019-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AR Draw App Project 2019-dummy.m"; sourceTree = "<group>"; };
+		53E1A76285E2C818D7B294F12DE31DDA /* EFColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFColorPicker-dummy.m"; sourceTree = "<group>"; };
+		5DD33AF8F9A58D1549700B24EB28195C /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
+		5F462C018B705F8875627C0FC32569EB /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks.sh"; sourceTree = "<group>"; };
+		63274C51F17B642A8602FEC3BB7D4809 /* EFColorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorView.swift; path = EFColorPicker/Classes/EFColorView.swift; sourceTree = "<group>"; };
+		66EBABDE437923CD4942893EB9F7D974 /* EFColorSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorSelectionView.swift; path = EFColorPicker/Classes/EFColorSelectionView.swift; sourceTree = "<group>"; };
+		6B6B840EE37664ECE00DCEB19A7FF0FA /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		6CF4FE6769E7751BE6C3C52F7A02FB5E /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		7218641A10B117BA9EB2DB6FE366862A /* Pods-AR Draw App Project 2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AR Draw App Project 2019-umbrella.h"; sourceTree = "<group>"; };
+		78AE1C6CD1A1791935EEDAE9C384E16E /* Pods_AR_Draw_App_Project_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AR_Draw_App_Project_2019.framework; path = "Pods-AR Draw App Project 2019.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F043FFECF8223BE9B3F849664A9CBAF /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8294D89B48D58921A0179B87358A7932 /* Pods-AR Draw App Project 2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019.debug.xcconfig"; sourceTree = "<group>"; };
+		8749BFA4B1BCE373BC3EAFCEAADBF687 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		8ACC0357C9ED50A14384429DF5FB295E /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		936D464B7D0A9385E3C101D9DF257B73 /* EFColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		941C0C9CA30C5524EFE2E15E1405702D /* EFColorWheelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFColorWheelView.swift; path = EFColorPicker/Classes/EFColorWheelView.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B6A0CA537CEE2C3DCB9BD10FAE54221D /* Pods-AR Draw App Project 2019Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C5FF35701F134AD7DF1A1B4129916E71 /* EFColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFColorPicker.framework; path = EFColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABAE7A2322BFA47CA23AA6658C96A93 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
+		CAC3B96EFF015071DF6DB06CB9255F1C /* EFColorPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFColorPicker-Info.plist"; sourceTree = "<group>"; };
+		CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		CD23A66B567839A59A63AD00EEBE0AAA /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m"; sourceTree = "<group>"; };
+		D446A4B241A0F1C8CDF0775ACBAABC1B /* Pods-AR Draw App Project 2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019.release.xcconfig"; sourceTree = "<group>"; };
+		D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast_Swift.framework; path = "Toast-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D662D7DFA4A546FFB116C95A0244C85F /* Pods-AR Draw App Project 2019-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AR Draw App Project 2019-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D747A97AD47A6A232B60744787BF97D8 /* EFColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFColorPicker.modulemap; sourceTree = "<group>"; };
+		DB6A392FA95B963DECA688F83632F0CE /* EFRGBView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFRGBView.swift; path = EFColorPicker/Classes/EFRGBView.swift; sourceTree = "<group>"; };
+		DC23E7C7B3723829C4DADF64786B0A38 /* EFColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFColorPicker.xcconfig; sourceTree = "<group>"; };
+		DFE06D142E93B22F300D6FF21BAF9002 /* Toast-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toast-Swift-Info.plist"; sourceTree = "<group>"; };
+		E2A7E8D9A1D7B2F04A8E27B0B0AC7A2E /* EFHSBView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFHSBView.swift; path = EFColorPicker/Classes/EFHSBView.swift; sourceTree = "<group>"; };
+		E5CAA4F4CADD814022D8581592A0A1CF /* EFSliderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFSliderView.swift; path = EFColorPicker/Classes/EFSliderView.swift; sourceTree = "<group>"; };
+		EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EEB0FC752E84B7B5DA3186EA3C294E31 /* Pods-AR Draw App Project 2019-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019-acknowledgements.plist"; sourceTree = "<group>"; };
+		F8819A5C3EFC50196E2F9F13E0180FBA /* Pods-AR Draw App Project 2019Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR Draw App Project 2019Tests-Info.plist"; sourceTree = "<group>"; };
+		F8ABE84F1DDDB1A8BF33D269AE3BC15E /* Pods-AR Draw App Project 2019Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AR Draw App Project 2019Tests.modulemap"; sourceTree = "<group>"; };
+		FAD8EC6BB81D9BE3007AD8E95E6FC14A /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR Draw App Project 2019Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF672744FC8E81E5A2D5E427E4BBB10C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FB0D7539AD71BC9EC9475B60D8959B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ED09EA34ACD4291A801AD76445B7CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6102CF7EA55F5A7D669F88BF0D1A701F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95ACABC71585D657249CC92BA7731A8F /* Foundation.framework in Frameworks */,
+				C06D290B9216533843023A0BF93F5927 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		903834BAE35A308AEF94BD14058017F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22DC4FDFFE9660BB4D9853F41965ABA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DDDAA01DA4299F611C8389F86EEC810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98D6770E12918C9CD891E768C133B2AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03EC8B5686AD8FDC2026CEBD601C9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F908619CDAD978D19229020BA8A90BF3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33F4E7706C1A7D33652D2E1CB4B16AD2 /* Pods-AR Draw App Project 2019Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABE84F1DDDB1A8BF33D269AE3BC15E /* Pods-AR Draw App Project 2019Tests.modulemap */,
+				1ACBF4E3EB0538A3DC3F54A5433B46F0 /* Pods-AR Draw App Project 2019Tests-acknowledgements.markdown */,
+				49E8BA15E65C71BF20E7ECAFF531678C /* Pods-AR Draw App Project 2019Tests-acknowledgements.plist */,
+				119B00D07C3C388B3D7013A86339F9B9 /* Pods-AR Draw App Project 2019Tests-dummy.m */,
+				F8819A5C3EFC50196E2F9F13E0180FBA /* Pods-AR Draw App Project 2019Tests-Info.plist */,
+				2DC5DA4EC685F97B4AFA4300C354CC40 /* Pods-AR Draw App Project 2019Tests-umbrella.h */,
+				FAD8EC6BB81D9BE3007AD8E95E6FC14A /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */,
+				B6A0CA537CEE2C3DCB9BD10FAE54221D /* Pods-AR Draw App Project 2019Tests.release.xcconfig */,
+			);
+			name = "Pods-AR Draw App Project 2019Tests";
+			path = "Target Support Files/Pods-AR Draw App Project 2019Tests";
+			sourceTree = "<group>";
+		};
+		473D67EB413C7893D4B414E738334320 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF672744FC8E81E5A2D5E427E4BBB10C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.modulemap */,
+				2A70F640266FB74E2693DF999521E5B8 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.markdown */,
+				7F043FFECF8223BE9B3F849664A9CBAF /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-acknowledgements.plist */,
+				CD23A66B567839A59A63AD00EEBE0AAA /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m */,
+				5F462C018B705F8875627C0FC32569EB /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-frameworks.sh */,
+				2C2634A0983C76A8CCD168268A36D2AF /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-Info.plist */,
+				347AB54A703545DE4A7E64AEB3C3E17C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h */,
+				8ACC0357C9ED50A14384429DF5FB295E /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */,
+				37CCC92297D407AD055B856507B109F1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */,
+			);
+			name = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests";
+			path = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests";
+			sourceTree = "<group>";
+		};
+		6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */,
+				CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		763E8E410539A9B60CCF6E7A91C28B91 /* Toast-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				6CF4FE6769E7751BE6C3C52F7A02FB5E /* Toast.swift */,
+				A8E6725930D623EACE2E83AA59A6FC17 /* Support Files */,
+			);
+			name = "Toast-Swift";
+			path = "Toast-Swift";
+			sourceTree = "<group>";
+		};
+		7902147BAEF5E3C1DF07A87E0F31C661 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6CF708150C54EDC0C1606410ADCCBDA /* Pods-AR Draw App Project 2019 */,
+				473D67EB413C7893D4B414E738334320 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests */,
+				33F4E7706C1A7D33652D2E1CB4B16AD2 /* Pods-AR Draw App Project 2019Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8CE7F9AC25F3D189D3C5134C11DBA68E /* EFColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				01409F6DD7F0F9826DB53C07878AA503 /* EFColorComponentView.swift */,
+				66EBABDE437923CD4942893EB9F7D974 /* EFColorSelectionView.swift */,
+				135F42F8A022DFF8A6DFE8155DD40097 /* EFColorSelectionViewController.swift */,
+				2A900FDBA77A8417E0E08100AAF9AD6E /* EFColorUtils.swift */,
+				63274C51F17B642A8602FEC3BB7D4809 /* EFColorView.swift */,
+				941C0C9CA30C5524EFE2E15E1405702D /* EFColorWheelView.swift */,
+				294763F5A7C4A34BF35C5B33A544DADA /* EFControl.swift */,
+				E2A7E8D9A1D7B2F04A8E27B0B0AC7A2E /* EFHSBView.swift */,
+				DB6A392FA95B963DECA688F83632F0CE /* EFRGBView.swift */,
+				E5CAA4F4CADD814022D8581592A0A1CF /* EFSliderView.swift */,
+				12CEFB1347E13BA5C68BD88CF7BF5953 /* EFThumbView.swift */,
+				EAA883D9AB590E01534FA3BE5F41C350 /* Support Files */,
+			);
+			name = EFColorPicker;
+			path = EFColorPicker;
+			sourceTree = "<group>";
+		};
+		A8E6725930D623EACE2E83AA59A6FC17 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B6B840EE37664ECE00DCEB19A7FF0FA /* Toast-Swift.modulemap */,
+				CABAE7A2322BFA47CA23AA6658C96A93 /* Toast-Swift.xcconfig */,
+				8749BFA4B1BCE373BC3EAFCEAADBF687 /* Toast-Swift-dummy.m */,
+				DFE06D142E93B22F300D6FF21BAF9002 /* Toast-Swift-Info.plist */,
+				5DD33AF8F9A58D1549700B24EB28195C /* Toast-Swift-prefix.pch */,
+				0CFB72DE26A9AF19A0F009DFAB4F1D28 /* Toast-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toast-Swift";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				F25886E2A9C50EBF37E090B2FE080679 /* Pods */,
+				F6015B1A6DA53A8E2567AF0F97BB2B62 /* Products */,
+				7902147BAEF5E3C1DF07A87E0F31C661 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		EAA883D9AB590E01534FA3BE5F41C350 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D747A97AD47A6A232B60744787BF97D8 /* EFColorPicker.modulemap */,
+				DC23E7C7B3723829C4DADF64786B0A38 /* EFColorPicker.xcconfig */,
+				53E1A76285E2C818D7B294F12DE31DDA /* EFColorPicker-dummy.m */,
+				CAC3B96EFF015071DF6DB06CB9255F1C /* EFColorPicker-Info.plist */,
+				936D464B7D0A9385E3C101D9DF257B73 /* EFColorPicker-prefix.pch */,
+				254BAE8C50523EB1B25294171915D788 /* EFColorPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EFColorPicker";
+			sourceTree = "<group>";
+		};
+		F25886E2A9C50EBF37E090B2FE080679 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CE7F9AC25F3D189D3C5134C11DBA68E /* EFColorPicker */,
+				763E8E410539A9B60CCF6E7A91C28B91 /* Toast-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6015B1A6DA53A8E2567AF0F97BB2B62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF35701F134AD7DF1A1B4129916E71 /* EFColorPicker.framework */,
+				78AE1C6CD1A1791935EEDAE9C384E16E /* Pods_AR_Draw_App_Project_2019.framework */,
+				30DF6B9166771BBF605459B02037A1D2 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */,
+				073B05A325B3F90B708D16A732A81746 /* Pods_AR_Draw_App_Project_2019Tests.framework */,
+				D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6CF708150C54EDC0C1606410ADCCBDA /* Pods-AR Draw App Project 2019 */ = {
+			isa = PBXGroup;
+			children = (
+				1B99FBDE7428539536BFB2B953CC5AC4 /* Pods-AR Draw App Project 2019.modulemap */,
+				D662D7DFA4A546FFB116C95A0244C85F /* Pods-AR Draw App Project 2019-acknowledgements.markdown */,
+				EEB0FC752E84B7B5DA3186EA3C294E31 /* Pods-AR Draw App Project 2019-acknowledgements.plist */,
+				4BE54A75A86C6A6E3AB5C2209694B262 /* Pods-AR Draw App Project 2019-dummy.m */,
+				027E79665BDB025CD6A9A134594562AC /* Pods-AR Draw App Project 2019-frameworks.sh */,
+				224DEC5120AFFB4957A34949778A0AFD /* Pods-AR Draw App Project 2019-Info.plist */,
+				7218641A10B117BA9EB2DB6FE366862A /* Pods-AR Draw App Project 2019-umbrella.h */,
+				8294D89B48D58921A0179B87358A7932 /* Pods-AR Draw App Project 2019.debug.xcconfig */,
+				D446A4B241A0F1C8CDF0775ACBAABC1B /* Pods-AR Draw App Project 2019.release.xcconfig */,
+			);
+			name = "Pods-AR Draw App Project 2019";
+			path = "Target Support Files/Pods-AR Draw App Project 2019";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E7ECBA069129999549662EB84AE162A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E5DA7A911EEC1A37E43457C9BAE2AEE /* Pods-AR Draw App Project 2019Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48A67DD75B53EA3215CEEFCA128A0F3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E51B770DA56F194F901B2583F71439C /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		541A0721D8D26374CF7CF04B1473A45A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2024EE5E265681137A9FEBC630E6E0F1 /* Toast-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71A67FCFAD05A21F8944FF8A1E668DFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73E63C40DB3360E7DA9E7FB33B77C40 /* EFColorPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4C4D68FE6A2FA4D449B30641FAA7B68 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D0033C2D248F75EC059A6E8CD7E0EB2 /* Pods-AR Draw App Project 2019-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04C4B8A82C294B3A8FCCFF8B30559381 /* EFColorPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6BED885607839A935851FDA64BB5796 /* Build configuration list for PBXNativeTarget "EFColorPicker" */;
+			buildPhases = (
+				71A67FCFAD05A21F8944FF8A1E668DFC /* Headers */,
+				6FA1588D9DDAB4CE7150443DA589E61A /* Sources */,
+				9DDDAA01DA4299F611C8389F86EEC810 /* Frameworks */,
+				42BD1CB36C0763FE808FD2145DC30F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EFColorPicker;
+			productName = EFColorPicker;
+			productReference = C5FF35701F134AD7DF1A1B4129916E71 /* EFColorPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE0C1AFF7AFEC8F1DB47D5D09546C7CE /* Pods-AR Draw App Project 2019Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85F5BF234A4A423CD7C58782B1E5FD6 /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019Tests" */;
+			buildPhases = (
+				2E7ECBA069129999549662EB84AE162A /* Headers */,
+				C0B74A9EE168F82E87DC2A8E388580A1 /* Sources */,
+				5FB0D7539AD71BC9EC9475B60D8959B5 /* Frameworks */,
+				D6480A1F9F99DED02816383447654746 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE77C976F3408F7FDFAD1A058F55ED94 /* PBXTargetDependency */,
+			);
+			name = "Pods-AR Draw App Project 2019Tests";
+			productName = "Pods-AR Draw App Project 2019Tests";
+			productReference = 073B05A325B3F90B708D16A732A81746 /* Pods_AR_Draw_App_Project_2019Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1D9174A2AA6C1DF0AB79B3EA35BB3E1 /* Pods-AR Draw App Project 2019 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E85656D86905A331955F1C3F9C78419F /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019" */;
+			buildPhases = (
+				A4C4D68FE6A2FA4D449B30641FAA7B68 /* Headers */,
+				3991B0AE81AEA166EDBB1E86B8296C08 /* Sources */,
+				903834BAE35A308AEF94BD14058017F9 /* Frameworks */,
+				DF58E09E601D598AE205651C39E17C86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB2F2C5A0FCD3CDE839DA6EE912555FC /* PBXTargetDependency */,
+				789ECF02280A4CE268F731BBAF72798A /* PBXTargetDependency */,
+			);
+			name = "Pods-AR Draw App Project 2019";
+			productName = "Pods-AR Draw App Project 2019";
+			productReference = 78AE1C6CD1A1791935EEDAE9C384E16E /* Pods_AR_Draw_App_Project_2019.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B990BD87169C76A3ED3FE8A9258D91A3 /* Toast-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C401847A53B4C2810311A8CBD715AD /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildPhases = (
+				541A0721D8D26374CF7CF04B1473A45A /* Headers */,
+				32133C6B0EACD421CB9EB1ABFCE89B97 /* Sources */,
+				6102CF7EA55F5A7D669F88BF0D1A701F /* Frameworks */,
+				8812DCC289D1E7BE07818E350A3B8656 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toast-Swift";
+			productName = "Toast-Swift";
+			productReference = D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBD9013B61A786586D273E307EB4DAD2 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44B17EF0B6A52719727FC2DE17C923F8 /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests" */;
+			buildPhases = (
+				48A67DD75B53EA3215CEEFCA128A0F3A /* Headers */,
+				F721EC7E166645681C92118C40D9B560 /* Sources */,
+				CC03EC8B5686AD8FDC2026CEBD601C9E /* Frameworks */,
+				E33384061E4B926E25CA27CAB64ED6E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B95ADDB3CFDF080729FBB5FF96F1DF0 /* PBXTargetDependency */,
+				F7AD88F86E9DC269B92311091AAB0449 /* PBXTargetDependency */,
+			);
+			name = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests";
+			productName = "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests";
+			productReference = 30DF6B9166771BBF605459B02037A1D2 /* Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F6015B1A6DA53A8E2567AF0F97BB2B62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C4B8A82C294B3A8FCCFF8B30559381 /* EFColorPicker */,
+				B1D9174A2AA6C1DF0AB79B3EA35BB3E1 /* Pods-AR Draw App Project 2019 */,
+				DBD9013B61A786586D273E307EB4DAD2 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests */,
+				AE0C1AFF7AFEC8F1DB47D5D09546C7CE /* Pods-AR Draw App Project 2019Tests */,
+				B990BD87169C76A3ED3FE8A9258D91A3 /* Toast-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42BD1CB36C0763FE808FD2145DC30F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8812DCC289D1E7BE07818E350A3B8656 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6480A1F9F99DED02816383447654746 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF58E09E601D598AE205651C39E17C86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E33384061E4B926E25CA27CAB64ED6E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32133C6B0EACD421CB9EB1ABFCE89B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B326644BB08AEDF697A82A0F1A66D68 /* Toast-Swift-dummy.m in Sources */,
+				4753716AE7A1AB22FB6BA61AA74D942F /* Toast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3991B0AE81AEA166EDBB1E86B8296C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D5EE27A6C5A0D37D7D8CB37C46A567 /* Pods-AR Draw App Project 2019-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FA1588D9DDAB4CE7150443DA589E61A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671564EDAB2CB22CA1C06BB41908BCD8 /* EFColorComponentView.swift in Sources */,
+				DB5C1ABDF1DB16B7F1BC8963A086AC40 /* EFColorPicker-dummy.m in Sources */,
+				E9600CF76022F32BF6460C40A82928AF /* EFColorSelectionView.swift in Sources */,
+				D11276F0980922C29872C27F104A523D /* EFColorSelectionViewController.swift in Sources */,
+				5D7F3D3F52B5D12D44AF49B79BE91B6B /* EFColorUtils.swift in Sources */,
+				58360C2A6DD8370CE63B532962A86C28 /* EFColorView.swift in Sources */,
+				2FD5C68BEB78435C2801F2C3F4335DA7 /* EFColorWheelView.swift in Sources */,
+				21B2F5BF8E4AAE580F72DB22B13DFD4B /* EFControl.swift in Sources */,
+				DE4859DD84B440FEF83FE43CF1C39092 /* EFHSBView.swift in Sources */,
+				B5EAD031921FA5E1A52902C753CE8A32 /* EFRGBView.swift in Sources */,
+				5E3FD92A4069F26516AD53747EB6BF42 /* EFSliderView.swift in Sources */,
+				EFB3315E266F1F38EE0BA0CC585ADC41 /* EFThumbView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B74A9EE168F82E87DC2A8E388580A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AA7A830F345934B74EC240B704221E6 /* Pods-AR Draw App Project 2019Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F721EC7E166645681C92118C40D9B560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8894B7886EBB710B2BD0F0FA3F8D7802 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		789ECF02280A4CE268F731BBAF72798A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Toast-Swift";
+			target = B990BD87169C76A3ED3FE8A9258D91A3 /* Toast-Swift */;
+			targetProxy = 608EA091857A1FE1A337D4F77AE62757 /* PBXContainerItemProxy */;
+		};
+		9B95ADDB3CFDF080729FBB5FF96F1DF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EFColorPicker;
+			target = 04C4B8A82C294B3A8FCCFF8B30559381 /* EFColorPicker */;
+			targetProxy = AB8AD782C3263B59FCAF66C763E0A92E /* PBXContainerItemProxy */;
+		};
+		DB2F2C5A0FCD3CDE839DA6EE912555FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EFColorPicker;
+			target = 04C4B8A82C294B3A8FCCFF8B30559381 /* EFColorPicker */;
+			targetProxy = 2748FC633ADA266BD0D9DBA6A1ABEC5C /* PBXContainerItemProxy */;
+		};
+		EE77C976F3408F7FDFAD1A058F55ED94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AR Draw App Project 2019";
+			target = B1D9174A2AA6C1DF0AB79B3EA35BB3E1 /* Pods-AR Draw App Project 2019 */;
+			targetProxy = 007F18BA5546CCBEA9E71CA018C846C5 /* PBXContainerItemProxy */;
+		};
+		F7AD88F86E9DC269B92311091AAB0449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Toast-Swift";
+			target = B990BD87169C76A3ED3FE8A9258D91A3 /* Toast-Swift */;
+			targetProxy = 4213BD03D2E68500CB668EE4FE9B39BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3448DAD9392B866A9DCB97A4AEE5388C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC23E7C7B3723829C4DADF64786B0A38 /* EFColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFColorPicker/EFColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFColorPicker/EFColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EFColorPicker/EFColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = EFColorPicker;
+				PRODUCT_NAME = EFColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		577F3C4644A6B1F1D6C381A523B73D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8294D89B48D58921A0179B87358A7932 /* Pods-AR Draw App Project 2019.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		660969DA4335657670688711FBCCAD4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6A0CA537CEE2C3DCB9BD10FAE54221D /* Pods-AR Draw App Project 2019Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6AE3D79159E8A4560C4F630B1ED58F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D446A4B241A0F1C8CDF0775ACBAABC1B /* Pods-AR Draw App Project 2019.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019/Pods-AR Draw App Project 2019.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		98898C6F52A6A7DBE554A243A24C2F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABAE7A2322BFA47CA23AA6658C96A93 /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Toast-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				PRODUCT_MODULE_NAME = Toast_Swift;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6B191E55762DA2A8A393584144D410C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37CCC92297D407AD055B856507B109F1 /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4C60E3BC7C57F5AF30613FBEE59AD42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD8EC6BB81D9BE3007AD8E95E6FC14A /* Pods-AR Draw App Project 2019Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019Tests/Pods-AR Draw App Project 2019Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3D7AA7B6797C4885E6D6232E7580830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABAE7A2322BFA47CA23AA6658C96A93 /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Toast-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				PRODUCT_MODULE_NAME = Toast_Swift;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F95260A8C2D49ADD6BC5971AF7D57302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACC0357C9ED50A14384429DF5FB295E /* Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests/Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F952B0DF9382C7987CD776EFE3EA82A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC23E7C7B3723829C4DADF64786B0A38 /* EFColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EFColorPicker/EFColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFColorPicker/EFColorPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EFColorPicker/EFColorPicker.modulemap";
+				PRODUCT_MODULE_NAME = EFColorPicker;
+				PRODUCT_NAME = EFColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44B17EF0B6A52719727FC2DE17C923F8 /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019-AR Draw App Project 2019UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95260A8C2D49ADD6BC5971AF7D57302 /* Debug */,
+				A6B191E55762DA2A8A393584144D410C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
+				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C401847A53B4C2810311A8CBD715AD /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98898C6F52A6A7DBE554A243A24C2F51 /* Debug */,
+				F3D7AA7B6797C4885E6D6232E7580830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85F5BF234A4A423CD7C58782B1E5FD6 /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C60E3BC7C57F5AF30613FBEE59AD42 /* Debug */,
+				660969DA4335657670688711FBCCAD4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6BED885607839A935851FDA64BB5796 /* Build configuration list for PBXNativeTarget "EFColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3448DAD9392B866A9DCB97A4AEE5388C /* Debug */,
+				F952B0DF9382C7987CD776EFE3EA82A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E85656D86905A331955F1C3F9C78419F /* Build configuration list for PBXNativeTarget "Pods-AR Draw App Project 2019" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				577F3C4644A6B1F1D6C381A523B73D1D /* Debug */,
+				6AE3D79159E8A4560C4F630B1ED58F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

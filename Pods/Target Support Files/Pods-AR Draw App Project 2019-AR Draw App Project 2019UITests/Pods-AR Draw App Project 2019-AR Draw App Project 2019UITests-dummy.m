@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests : NSObject
+@end
+@implementation PodsDummy_Pods_AR_Draw_App_Project_2019_AR_Draw_App_Project_2019UITests
+@end

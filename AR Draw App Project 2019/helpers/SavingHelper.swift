@@ -15,15 +15,12 @@ protocol Saving : class {
 
 class SavingHelper {
     
-    
     private var tField: UITextField!
     private var wrldMap:ARWorldMap?
     var delegate: Saving?
-    ///ipv sceneview worldmap, dan nog een array van colors en een array van sizes
     func saveDrawing( scene: ARSCNView,colors: [Color],radia:[CGFloat]) -> (UIAlertController) {
         
         func configurationTextField(textField: UITextField!) {
-            print("generating the TextField")
             textField.placeholder = "Enter an item"
             tField = textField
         }
@@ -44,7 +41,7 @@ class SavingHelper {
                     else {  return }
                 self.wrldMap = map
                 
-                let title = self.tField.text ?? "drawing (deze waarde mss incrementen)"
+                let title = self.tField.text ?? "drawing"
                 let newDrawing = Drawing(title: title, WRLDPath: title, colors:colors, radia:radia)
                 let currentScene = scene.scene
                 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -56,11 +53,9 @@ class SavingHelper {
                     /// Schrijf de worldmap weg
                     let data = try NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true)
                     try data.write(to: mapURL, options: [.atomic])
-                    /// hier stond didsave call naar delegate
                 } catch {
                     fatalError("Can't save map: \(error.localizedDescription)")
                 }
-                
                 do {
                     let dataURL = documentsDirectory.appendingPathComponent(newDrawing.title + "ARDATA").appendingPathExtension("plist")
                     let propertyListEncoder = PropertyListEncoder()

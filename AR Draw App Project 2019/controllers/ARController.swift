@@ -41,24 +41,20 @@ class ARController: UIViewController, ARSCNViewDelegate {
         let colorData = defaults.object(forKey: "selectedColor") as? Data ?? Data()
         let propertyListDecoder = PropertyListDecoder()
         if let decodedColor = try? propertyListDecoder.decode(Color.self,from: colorData){
-            print(decodedColor.self.uiColor)
+            print(decodedColor.self.uiColor) /// testing
         }
         
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        /// hier komt de state van de opgeslagen sessie
         configuration.initialWorldMap = worldMap
         if isLoading {
             colors = worldMapData!.colors
             radia = worldMapData!.radia
         }
-        /// bij meegeven van worldmap ook de kleur van de prev sessie opslagen en hier initten TODO
-
-        // hier komt de state van de opgeslagen sessie
-        // configuration.initialWorldMap
         sceneView.session.run(configuration, options: [.resetTracking,.removeExistingAnchors])
     }
     
@@ -122,7 +118,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         self.present(alert, animated: true)
     }
     
-    // MARK: - SaveHelper <- veranderen naar ARHelper
+    // MARK: - SaveHelper
     
     @IBAction func saveDrawing () {
         let fileCount = DocumentHelper.getDocumentsContent().count
@@ -139,8 +135,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func drawButtonPressed(sender:AnyObject) {
         draw()
-          timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector:#selector(draw), userInfo: nil, repeats: true)
-
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector:#selector(draw), userInfo: nil, repeats: true)
     }
     
     @IBAction func drawButtonReleased(sender:AnyObject){
@@ -149,16 +144,16 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     @objc func draw(){
         /// anchor locatie voor waar de node komt
-            guard let currentFrame = sceneView.session.currentFrame else { return }
-            var translation = matrix_identity_float4x4
-            /// Node 30 cm voor de camera plaatsen
-            translation.columns.3.z = -0.6
-            /// simdTransform is wat we gaan gebruiken om een nieuwe anchor aan te maken
-            let anchor = ARAnchor(transform: matrix_multiply(currentFrame.camera.transform, translation))
-            
-            sceneView.session.add(anchor: anchor)
+        guard let currentFrame = sceneView.session.currentFrame else { return }
+        var translation = matrix_identity_float4x4
+        /// Node 30 cm voor de camera plaatsen
+        translation.columns.3.z = -0.6
+        /// simdTransform is wat we gaan gebruiken om een nieuwe anchor aan te maken
+        let anchor = ARAnchor(transform: matrix_multiply(currentFrame.camera.transform, translation))
+        
+        sceneView.session.add(anchor: anchor)
     }
-  
+    
     
     // MARK: - NODE LOGICA
     
@@ -179,7 +174,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
             self.currentSize = CGFloat(self.sizeSlider.value)
         }
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "colorPickerSegue" {
             let colorPickerController = segue.destination as! ColorPickerController
