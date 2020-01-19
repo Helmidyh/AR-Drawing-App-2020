@@ -171,7 +171,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     @objc func onSizeChange(){
         DispatchQueue.main.async {
-            self.currentSize = CGFloat(self.sizeSlider.value)
+            self.currentSize = CGFloat(self.sizeSlider.value / 10)
         }
     }
     
