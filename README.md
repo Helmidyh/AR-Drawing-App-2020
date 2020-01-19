@@ -1,4 +1,4 @@
-# AR Drawing app
+# Augmented Reality Drawing app
 
 An app that lets you draw in 3D space with multiple colors.
 
