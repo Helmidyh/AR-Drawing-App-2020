@@ -1,6 +1,6 @@
 # Augmented Reality Drawing app
 
-An app that lets you draw in 3D space with multiple colors.
+An app that lets you draw and save sketches in 3D space with multiple colors !
 
 The app is still in a buggy state so keep that in mind.
 
