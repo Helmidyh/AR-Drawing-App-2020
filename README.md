@@ -18,7 +18,9 @@ Before drawing any lines you should give the app some time to map the enviroment
 
 </div> <br>
 <br>
-Developed by Helmi Dayyeh 
+Developed by Helmi Dayyeh <br>
+
+Debugging the app requires a connection to an Iphone (6s or higher)
 
 #### Used technologies: 
 
