@@ -4,7 +4,7 @@ An app that lets you draw in 3D space with multiple colors.
 
 The app is still in a buggy state so keep that in mind.
 
-Before actually drawing any lines you should give the app some time to map the enviroment, it is recommended to move the camera around the area for approx. 7 seconds.
+Before drawing any lines you should give the app some time to map the enviroment, (in a well-lit room) it is recommended to move the camera around the area for approx. 7 seconds.
 
 <div >
   <img  src="https://user-images.githubusercontent.com/1749704/72679589-e478d280-3ab0-11ea-918a-b246fa59a02a.png" width="300" height="600">
